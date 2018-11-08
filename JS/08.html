@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS08</title>
+</head>
+<body>
+    Enter the text : <input type="text" id="txt" /><br />
+    <br />
+    <button id="strCpr" onclick="compareString">
+        Submit
+    </button><br />
+    <span id="result"></span>
+</body>
+
+</html>
+<script>
+    var btn1 = document.getElementById("strCpr");
+    function compareString() {
+        var input = document.getElementById("txt").value;
+
+        var ps = str.replace(/[^p]/g, "");
+
+        var ss = str.replace(/[^s]/g, "");
+
+        var p_num = ps.length;
+        var s_num = ss.length;
+
+        if (p_num === s_num)
+            document.getElementById("result").innerHTML = "true";
+        else
+             document.getElementById("result").innerHTML = "false";
+
+    }
+    btn1.addEventListener("click", compareString);
+
+</script>

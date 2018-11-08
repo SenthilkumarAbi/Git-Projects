@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS09</title>
+</head>
+<body>
+    Enter the text : <input type="text" id="txt" /><br />
+    <br />
+    <button id="strCpr" onclick="newstring">
+        Submit
+    </button><br />
+    <span id="result"></span>
+</body>
+</html>
+<script>
+
+    var btn1 = document.getElementById("strCpr");
+    function newstring(str) {
+        var str = document.getElementById("txt").value;
+        if (str.length >= 3) {
+            result_str = str.substring(str.length - 3);
+            document.getElementById("result").innerHTML = result_str + result_str + result_str + result_str;
+        }
+        else
+            document.getElementById("result").innerHTML = "false";
+    }
+    btn1.addEventListener("click", newstring);
+
+
+</script>

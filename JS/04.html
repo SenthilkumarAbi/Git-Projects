@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    Enter a number : <input type="text" id="inp"/>
+
+    <button id="btn" onclick="compareRandom">Submit</button> 
+
+    <span id="displayResult"></span>
+</body>
+</html>
+<script type="text/javascript">
+    
+        var btn = document.getElementById("btn");
+
+        function getRadNo(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+        function compareRandom() {
+            var rdn = getRadNo(10);
+            var inp = document.getElementById("inp").value;
+            if (parseInt(rdn) === parseInt(inp))
+                document.getElementById("displayResult").innerHTML = "Good Work";
+            else
+                document.getElementById("displayResult").innerHTML = "Not matched";
+        }
+        btn.addEventListener("click", compareRandom);
+    
+</script>

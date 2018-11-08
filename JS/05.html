@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS05</title>
+</head>
+<body>
+    1st Number : <input type="text" id="inp1" /><br/>
+    2nd Number : <input type="text" id="inp2" /><br />
+    <button id="mulbtn" onclick="multiply">Multiply</button> 
+    <button id="divbtn" onclick="divide">Divide</button> <br />
+    
+    The Result is :<br />
+    <span id="displayResult"></span>
+</body>
+</html>
+<script>
+    var input1;
+    var input2; 
+
+    var btn1 = document.getElementById("mulbtn");
+    var btn2 = document.getElementById("divbtn");
+
+    function multiply() {
+        input1 = document.getElementById("inp1").value;
+        input2 = document.getElementById("inp2").value;
+        document.getElementById("displayResult").innerHTML = input1 * input2;;
+            
+    }
+
+    function divide() {
+        input1 = document.getElementById("inp1").value;
+        input2 = document.getElementById("inp2").value;
+        document.getElementById("displayResult").innerHTML = input1 / input2;
+        
+    }
+
+    btn1.addEventListener("click", multiply);
+    btn2.addEventListener("click", divide);
+</script>

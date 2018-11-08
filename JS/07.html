@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS07</title>
+     
+
+</head>
+<body>
+    Enter the text : <input type="text" id="txt"  /><br />
+    <br />
+    <button id="uprcase" onclick="Uppercase">
+        Submit
+    </button><br />
+    <span id="result"></span>
+</body>
+</html>
+<script>
+    var btn1 = document.getElementById("uprcase");
+    function Uppercase() {
+        var input = document.getElementById("txt").value;
+     
+        input = input.split(" ");
+
+        for (var i = 0, x = input.length; i < x; i++) {
+            input[i] = input[i][0].toUpperCase() + input[i].substr(1);
+        }
+
+        var strop = input.join(" ")
+                
+        document.getElementById("result").innerHTML = strop;
+    }
+    btn1.addEventListener("click", Uppercase);
+</script>

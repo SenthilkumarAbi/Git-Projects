@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JS01</title>
+</head>
+<body>
+    <p>Today is : <span id="pid"></span>.</p>
+    <p>Current time is : <span id="hrs"></span> : <span id="min"></span> : <span id="sec"></span></p>
+    <script>
+        var d = new Date();
+        var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        document.getElementById("pid").innerHTML = days[d.getDay()];
+        document.getElementById("hrs").innerHTML = d.toLocaleString('en-US', { hour: 'numeric', hour12: true });
+        document.getElementById("min").innerHTML = d.getMinutes();
+        document.getElementById("sec").innerHTML = d.getSeconds();
+    </script>
+</body>
+</html>
