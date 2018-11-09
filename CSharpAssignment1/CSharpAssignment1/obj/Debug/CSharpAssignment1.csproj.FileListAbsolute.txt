@@ -1,0 +1,6 @@
+C:\New folder\Senthil\CSharpAssignment1\CSharpAssignment1\bin\Debug\CSharpAssignment1.exe.config
+C:\New folder\Senthil\CSharpAssignment1\CSharpAssignment1\bin\Debug\CSharpAssignment1.exe
+C:\New folder\Senthil\CSharpAssignment1\CSharpAssignment1\bin\Debug\CSharpAssignment1.pdb
+C:\New folder\Senthil\CSharpAssignment1\CSharpAssignment1\obj\Debug\CSharpAssignment1.csprojResolveAssemblyReference.cache
+C:\New folder\Senthil\CSharpAssignment1\CSharpAssignment1\obj\Debug\CSharpAssignment1.exe
+C:\New folder\Senthil\CSharpAssignment1\CSharpAssignment1\obj\Debug\CSharpAssignment1.pdb
