@@ -1,0 +1,11 @@
+<p>
+  movie works!
+</p>
+
+<input type="text" style="width:130px" class="form-control" id="txtInput" 
+required
+ [(ngModel)]="txtInput"  
+ name="txtInput"> 
+
+<input type="button" value="GetMovieInfo" (click)="getData()" >
+<div>{{data |json}}</div>   
