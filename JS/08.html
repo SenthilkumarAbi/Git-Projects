@@ -18,15 +18,16 @@
 <script>
     var btn1 = document.getElementById("strCpr");
     function compareString() {
+ 
         var input = document.getElementById("txt").value;
-
-        var ps = str.replace(/[^p]/g, "");
-
-        var ss = str.replace(/[^s]/g, "");
-
+ 
+        var ps = input.replace(/[^p]/g, "");
+ 
+        var ss = input.replace(/[^s]/g, "");
+ 
         var p_num = ps.length;
         var s_num = ss.length;
-
+ 
         if (p_num === s_num)
             document.getElementById("result").innerHTML = "true";
         else
