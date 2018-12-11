@@ -46,7 +46,7 @@ namespace WebApplication1.Controllers
         public ActionResult Login(Person model)
         {
 
-            return RedirectToAction("Home");
+            return RedirectToAction("Home","Twitter");
         }
     }
 }

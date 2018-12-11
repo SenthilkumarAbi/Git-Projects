@@ -2,46 +2,46 @@
 
 @{
     ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/WithOutMenuView.cshtml";
 }
 
 <h2>Login</h2>
 <div class="container">
-    @using (Html.BeginForm("User","Login"))
+    @using (Html.BeginForm("Login", "User"))
     {
-    <table class="table table-bordered">
+      <table class="table table-bordered">
         <tr>
-            <td>
-                UserName:
-            </td>
-            <td class="form-control">
-                @Html.TextBoxFor(m => m.fullname)
-            </td>
+          <td>
+            UserName:
+          </td>
+          <td class="form-control">
+            @Html.TextBoxFor(m => m.fullname)
+          </td>
         </tr>
         <tr>
-            <td>
-                Password:
-            </td>
-            <td class="form-control">
-                @Html.TextBoxFor(m => m.password)
-            </td>
+          <td>
+            Password:
+          </td>
+          <td class="form-control">
+            @Html.TextBoxFor(m => m.password)
+          </td>
         </tr>
         <tr>
-            <td colspan="2">
-                <input type="submit" value="Login"    />
-            </td>
+          <td  class="text-center">
+         
+          </td>
+          <td colspan="2">
+            <input type="submit" value="Login" /> &nbsp;&nbsp;&nbsp;
+            @Html.ActionLink("Register", "SignUp")
+          </td>
         </tr>
+        
         <tr>
-            <td colspan="2">
-                @Html.ActionLink("Register", "SignUp")
-            </td>
+          <td colspan="2" class="text-danger">
+            @TempData["err"]
+          </td>
         </tr>
-        <tr>
-            <td colspan="2" class="text-danger">
-                @TempData["err"]
-            </td>
-        </tr>
-    </table>
+      </table>
     }
 </div>
 

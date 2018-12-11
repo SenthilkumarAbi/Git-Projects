@@ -9,7 +9,12 @@ namespace TwitterClone_MVC_WebAPI.Controllers
 {
     public class TwitterController : Controller
     {
-     
-
+    [HttpGet]
+    public ActionResult Home()
+    {
+      return View();
     }
+
+
+  }
 }
