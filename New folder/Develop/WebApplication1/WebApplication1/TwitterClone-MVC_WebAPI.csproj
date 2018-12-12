@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -163,11 +164,13 @@
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\test.cs" />
     <Compile Include="Models\Tweet.cs" />
+    <Compile Include="Models\TwitterModal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\navbar.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -206,6 +209,8 @@
     <Content Include="Views\User\SignUp.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\Shared\WithOutMenuView.cshtml" />
+    <Content Include="Views\Twitter\View.cshtml" />
+    <Content Include="Views\Twitter\Tweets.cshtml" />
     <Content Include="Views\Twitter\Home.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +230,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonCommunicationHelper\CommonCommunicationHelper.csproj">
+      <Project>{aea1f7f1-f677-4b2e-9d78-acdb57755baa}</Project>
+      <Name>CommonCommunicationHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TwitterClone_BAL\TwitterClone_BAL.csproj">
+      <Project>{198c0e59-621f-4a85-a055-888e475bdb90}</Project>
+      <Name>TwitterClone_BAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

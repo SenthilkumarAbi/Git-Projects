@@ -1,51 +1,37 @@
-﻿@model TwitterClone_MVC_WebAPI.Models.Tweet
+﻿@model TwitterClone_MVC_WebAPI.Models.TwitterModal
 
 @{
     ViewBag.Title = "Home";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Home</h2>
+<section>
+  <nav>
+    <h2></h2>
+  </nav>
+  <article>
+    <h2 class="text-right">
+      Welcome @Html.Display("_person.fullname"),
+    </h2>
 
-<div>
-    <h4>Tweet</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.tweet_id)
-        </dt>
+    @using (Html.BeginForm())
+    {
+    @Html.AntiForgeryToken()
+    <div class="row">
+      <div class="col-sm-8 text-left">
+        What are you doing ?
+        @Html.TextAreaFor(m => m._myTweet.message, new { @class = "form-control" })
+        <input class="btn btn-primary form-control" type="button" value="Update" />
+      </div>
+      <div class="col-sm-8 text-left">
 
-        <dd>
-            @Html.DisplayFor(model => model.tweet_id)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.user_id)
-        </dt>
+      </div>
+    </div>
+    }
 
-        <dd>
-            @Html.DisplayFor(model => model.user_id)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.message)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.message)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.created)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.created)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    <div class="float">
+      @{Html.RenderAction("GetTweetMessages", "Twitter", new { userId = Model._person.user_id });}
+    </div>
+  </article>
+</section>

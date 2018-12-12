@@ -5,14 +5,38 @@ using System.Web;
 using System.Web.Mvc;
 using TwitterClone_MVC_WebAPI.Models;
 
+
 namespace TwitterClone_MVC_WebAPI.Controllers
 {
-    public class TwitterController : Controller
-    {
+  public class TwitterController : Controller
+  {
     [HttpGet]
     public ActionResult Home()
     {
-      return View();
+      TwitterModal _twitterModal = new TwitterModal();
+      _twitterModal._person.fullname = "Senthilkumar";
+      _twitterModal._person.email = "senthil.mailto@gmail.com";
+      return View(_twitterModal);
+    }
+
+    [ChildActionOnly]
+    public PartialViewResult GetTweetMessages(int userId)
+    {
+
+
+      IEnumerable<Tweet> Items = new List<Tweet> {
+    new Tweet (){ tweet_id = 1,message = "had tea",
+            created=DateTime.Now, user_id= 2, fullname="test" },
+     new Tweet (){ tweet_id = 2,message = "coffee with friends",
+            created=DateTime.Now, user_id= 2 , fullname="test1"},
+     new Tweet (){ tweet_id = 3,message = "fun with movie",
+            created=DateTime.Now, user_id= 2 , fullname="test2"},
+     new Tweet (){ tweet_id = 5,message = "Tea",
+            created=DateTime.Now, user_id= 2, fullname="test3" },
+      new Tweet (){ tweet_id = 6,message = "Tea",
+            created=DateTime.Now, user_id= 2 , fullname="test4"},
+};
+      return PartialView("Tweets", Items);
     }
 
 

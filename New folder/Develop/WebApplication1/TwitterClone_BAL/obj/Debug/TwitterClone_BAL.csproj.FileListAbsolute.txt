@@ -1,0 +1,9 @@
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\TwitterClone_BAL.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\TwitterClone_BAL.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\obj\Debug\TwitterClone_BAL.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\obj\Debug\TwitterClone_BAL.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\CommonCommunicationHelper.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\TwitterClone_DAL.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\CommonCommunicationHelper.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\TwitterClone_DAL.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\obj\Debug\TwitterClone_BAL.csprojResolveAssemblyReference.cache

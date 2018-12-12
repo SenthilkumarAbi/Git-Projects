@@ -1,0 +1,4 @@
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.pdb

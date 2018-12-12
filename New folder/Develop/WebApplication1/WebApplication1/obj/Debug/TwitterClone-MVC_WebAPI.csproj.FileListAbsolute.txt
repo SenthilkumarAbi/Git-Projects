@@ -141,6 +141,10 @@ C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Deve
 C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\Microsoft.AI.WindowsServer.xml
 C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\Microsoft.AI.Web.xml
-C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\TwitterClone-MVC_WebAPI.csprojResolveAssemblyReference.cache
 C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\TwitterClone_BAL.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\TwitterClone_BAL.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\TwitterClone-MVC_WebAPI.csprojResolveAssemblyReference.cache
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\CommonCommunicationHelper.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\CommonCommunicationHelper.pdb

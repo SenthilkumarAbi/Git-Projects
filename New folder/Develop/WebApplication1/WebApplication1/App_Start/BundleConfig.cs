@@ -25,6 +25,7 @@ namespace TwitterClone_MVC_WebAPI
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                       "~/Content/navbar.css",
                       "~/Content/site.css"));
         }
     }

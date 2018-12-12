@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TwitterClone_MVC_WebAPI.Models.Tweet>
+
+<h2>
+  Tweets
+</h2>
+<table class="table">
+    <tr>
+        <th class="text-primary text-center" >
+            @Html.DisplayNameFor(model => model.tweet_id)
+        </th>
+        <th class="text-primary text-center">
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th class="text-primary text-center">
+            @Html.DisplayNameFor(model => model.message)
+        </th>
+        <th class="text-primary text-center">
+            @Html.DisplayNameFor(model => model.created)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="text-center text-muted">
+            @Html.DisplayFor(modelItem => item.tweet_id)
+        </td>
+        <td class="text-center text-muted">
+            @Html.DisplayFor(modelItem => item.fullname)
+        </td>
+        <td class="text-center text-muted">
+            @Html.DisplayFor(modelItem => item.message)
+        </td>
+        <td class="text-center text-muted">
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+}
+
+</table>
