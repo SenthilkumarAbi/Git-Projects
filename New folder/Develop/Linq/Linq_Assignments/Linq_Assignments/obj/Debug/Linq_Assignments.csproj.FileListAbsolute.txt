@@ -1,0 +1,6 @@
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\Linq\Linq_Assignments\Linq_Assignments\bin\Debug\Linq_Assignments.exe.config
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\Linq\Linq_Assignments\Linq_Assignments\bin\Debug\Linq_Assignments.exe
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\Linq\Linq_Assignments\Linq_Assignments\bin\Debug\Linq_Assignments.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\Linq\Linq_Assignments\Linq_Assignments\obj\Debug\Linq_Assignments.csprojResolveAssemblyReference.cache
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\Linq\Linq_Assignments\Linq_Assignments\obj\Debug\Linq_Assignments.exe
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\Linq\Linq_Assignments\Linq_Assignments\obj\Debug\Linq_Assignments.pdb
