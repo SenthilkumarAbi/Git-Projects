@@ -161,9 +161,9 @@ namespace Linq_Assignments
       List<Order> Orderlst = new List<Order>() { new Order { OrderId = 1, ItemName = "Chair" , OrderDate = DateTime.Now.AddDays(10), Quantity = 10 , TotalPrice=0},
                                                   new Order { OrderId =2, ItemName = "Shoe" , OrderDate = DateTime.Now.AddDays(3), Quantity = 16   , TotalPrice=0},
                                                   new Order { OrderId = 3, ItemName = "Shirt" , OrderDate = DateTime.Now.AddDays(50), Quantity = 50   , TotalPrice=0},
-                                                  new Order { OrderId = 4, ItemName = "Bike" , OrderDate = DateTime.Now.AddDays(6), Quantity = 3  , TotalPrice=0 },
-                                                  new Order { OrderId = 5, ItemName = "T-Shirt" , OrderDate = DateTime.Now.AddDays(80), Quantity = 25  , TotalPrice=0 },
-                                                  new Order { OrderId = 6, ItemName = "Watch" , OrderDate = DateTime.Now.AddDays(2), Quantity = 90  , TotalPrice=0 },
+                                                  new Order { OrderId = 4, ItemName = "Bike" , OrderDate = DateTime.Now.AddDays(-370), Quantity = 3  , TotalPrice=0 },
+                                                  new Order { OrderId = 5, ItemName = "T-Shirt" , OrderDate = DateTime.Now.AddDays(-380), Quantity = 25  , TotalPrice=0 },
+                                                  new Order { OrderId = 6, ItemName = "Watch" , OrderDate =  DateTime.Now.AddDays(-330) , Quantity = 90  , TotalPrice=0 },
                                                    new Order { OrderId = 7, ItemName = "Mobile" , OrderDate = DateTime.Now.AddDays(12), Quantity = 3  , TotalPrice=0 },
                                                   new Order { OrderId = 8, ItemName = "HeadSet" , OrderDate = DateTime.Now.AddDays(32), Quantity = 4   , TotalPrice=0},
                                                   new Order { OrderId = 9, ItemName = "TV" , OrderDate = DateTime.Now.AddDays(15), Quantity = 1  , TotalPrice=0 },
@@ -228,8 +228,8 @@ namespace Linq_Assignments
       Console.WriteLine();
       Console.WriteLine();
       var rr1 = (from l1 in Orderlst
-                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year } by new { month = l1.OrderDate.Month, year = l1.OrderDate.Year } into d
-                 select new { dt = string.Format("{0}/{1}", d.Key.month, d.Key.year), count = d.Count() }).OrderByDescending(g => g.dt);
+                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year } by new { month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year) } into d
+                 select new { dt = d.Key.month, count = d.Count() }).OrderByDescending(g => g.dt);
       foreach (var item in rr1)
       {
         Console.WriteLine("Orders Placed in the month {0}   ", item.dt);
@@ -259,31 +259,31 @@ namespace Linq_Assignments
        * 
        */
 
-      var rr3 = (from l1 in Orderlst
+      var O2rderlst = (Orderlst
+                       .Join(Itemlst, l1 => l1.ItemName, l2 => l2.ItemName,
+                         (l1, l2) => new Order() { OrderId = l1.OrderId, ItemName = l1.ItemName, Quantity = l1.Quantity, TotalPrice = (l1.Quantity * l2.price), OrderDate = l1.OrderDate, month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year) }
+                             ))
+                        .GroupBy(l2 => l2.month).ToList();
 
-                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year } by new { month = l1.OrderDate.Month, year = l1.OrderDate.Year } into d
-                 select new { dt = string.Format("{0}/{1}", d.Key.month, d.Key.year), count = d.Count() }).OrderByDescending(g => g.dt);
-      foreach (var item in rr3)
+
+      foreach (var item in O2rderlst)
       {
-        Console.WriteLine("Orders Placed in the month {0}   ", item.dt);
-    
+        Console.WriteLine("Orders Placed in the month {0}   ", item.Key);
 
-        //List<Order> Result1 = Itemlst.Join(
-        //  Orderlst.Where(_=> _.ItemName!= string.Empty &&   string.Format("{0}/{1}", _.OrderDate.Month, _.OrderDate.Year) == item.dt ),
-        //  OrderlstResult => OrderlstResult.ItemName,
-        //  ItemRes => ItemRes.ItemName,
-        //  (OrderlstResult, ItemRes) => OrderlstResult);
-          
-        var groupByOrderDateMonthWithPrice = (from p in Orderlst
-                                              join d1 in Itemlst on p.ItemName equals d1.ItemName
-                                              where string.Format("{0}/{1}", p.OrderDate.Month, p.OrderDate.Year) == item.dt
-                                              select new { p.OrderId, p.ItemName, p.OrderDate, totalPrice = (p.Quantity * d1.price) }
-                                              //.Select(rs => new Order() { OrderId = rs.OR}
-                                     );
-        foreach (var k in groupByOrderDateMonthWithPrice)
+        #region ref
+        //        Join between two list using query methods
+        //list1.Join(list2, l1 => l1.Sid, l2 => l2.Sid, (l1, l2) => new { l1.Sid, l1.Sname, l2.Cname });
+        //        with Group by
+        //                  (list1.Join(list2, l1 => l1.Sid, l2 => l2.Sid, (l1, l2) => new { l1.Sid, l1.Sname, l2.Cname })).GroupBy(l2 => l2.Cname);
+        //        https://docs.microsoft.com/en-us/dotnet/csharp/linq/perform-inner-joins
+        #endregion
+        Console.WriteLine("******************************************");
+        foreach (var item1 in item)
         {
-          Console.WriteLine("OrderID : {0}  ItemName: {1} OrderDate: {2} TotalPrice: {3}", k.OrderId, k.ItemName, k.OrderDate, k.totalPrice);
+          Console.WriteLine("OrderID : {0}  ItemName: {1} OrderDate: {2} TotalPrice: {3}", item1.OrderId, item1.ItemName, item1.OrderDate, item1.TotalPrice);
         }
+        Console.WriteLine();
+        Console.WriteLine();
       }
 
       Console.ReadLine();
@@ -298,28 +298,106 @@ namespace Linq_Assignments
        */
 
       var rr2 = (from l1 in Orderlst
-                 
-                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year } by new { month = l1.OrderDate.Month, year = l1.OrderDate.Year } into d
-                 select new { dt = string.Format("{0}/{1}", d.Key.month, d.Key.year), count = d.Count() }).OrderByDescending(g => g.dt);
+                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year } by new { month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year) } into d
+                 select new { dt = d.Key.month, count = d.Count() }).OrderByDescending(g => g.dt);
       foreach (var item in rr2)
       {
         Console.WriteLine("Orders Placed in the month {0}   ", item.dt);
         var groupByOrderDateMonthWithPrice = (from p in Orderlst
-                                     join d1 in Itemlst on p.ItemName equals d1.ItemName
-                                     where string.Format("{0}/{1}", p.OrderDate.Month, p.OrderDate.Year) == item.dt
-                                     select new { p.OrderId, p.ItemName,p.OrderDate, totalPrice = (p.Quantity* d1.price) }
-                                     ) ;
+                                              join d1 in Itemlst on p.ItemName equals d1.ItemName
+                                              where string.Format("{0}/{1}", p.OrderDate.Month, p.OrderDate.Year) == item.dt
+                                              select new { p.OrderId, p.ItemName, p.OrderDate, totalPrice = (p.Quantity * d1.price) }
+                                     );
+        Console.WriteLine("******************************************");
         foreach (var k in groupByOrderDateMonthWithPrice)
         {
-          Console.WriteLine( "OrderID : {0}  ItemName: {1} OrderDate: {2} TotalPrice: {3}", k.OrderId, k.ItemName, k.OrderDate, k.totalPrice);
+          Console.WriteLine("OrderID : {0}  ItemName: {1} OrderDate: {2} TotalPrice: {3}", k.OrderId, k.ItemName, k.OrderDate, k.totalPrice);
         }
+        Console.WriteLine();
+        Console.WriteLine();
       }
 
       Console.ReadLine();
       Console.Clear();
       #endregion
+
+      #region 7
+      /*
+       * 7.Check if all the quantities in the Order collection is > 0.
+       * Get the name of the item that was ordered in largest quantity in a single order. (Hint: use LINQ methods to sort)
+       * Find if there are any orders placed before Jan of this year.
+       */
+
+
+      List<Order> seventh1 = (from p in Orderlst
+                              join d1 in Itemlst on p.ItemName equals d1.ItemName
+                              where p.OrderDate.Year < DateTime.Now.Year
+                              orderby p.Quantity descending
+                              select p).ToList();
+
+      Order seventh = (from p in Orderlst
+                       join d1 in Itemlst on p.ItemName equals d1.ItemName
+                       where p.Quantity > 0
+                       orderby p.Quantity descending
+                       select p
+                     ).Take(1).SingleOrDefault();
+
+      Console.WriteLine();
+      Console.WriteLine();
+      if (seventh != null)
+        Console.WriteLine(" Order which is checked quantity >0 and it has most larger in quantity order . The ItemName: {0}  ", seventh.ItemName);
+      else
+        Console.WriteLine(" No Order is placed quantity >0 and it has larger quatity    ");
+
+
+      Console.WriteLine();
+      Console.WriteLine();
+      Console.WriteLine(" Orders placed before Jan of this year: ");
+      foreach (var item in seventh1)
+      {
+        Console.WriteLine("  ItemName: {0}  ", item.ItemName);
+      }
+
+
+      Console.ReadLine();
+      Console.Clear();
+      #endregion
+
+      #region 8
+      /*
+       *  8. Rewrite the last two example of that used Count using LINQ query methods entirely.
+       *  get the name of the item that was ordered in largest quantity in a single order.
+       */
+      Order eight = (from p in Orderlst
+                       join d1 in Itemlst on p.ItemName equals d1.ItemName
+                       where p.Quantity > 0
+                       
+                       select p
+                    ).Take(1).SingleOrDefault();
+
+    //  var teamBestScores =
+    //from player in players
+    //group player by player.Team into playerGroup
+    //select new
+    //{
+    //  Team = playerGroup.Key,
+    //  BestScore = playerGroup.Max(x => x.Score),
+    //};
+
+      
+      #endregion
+
+      #region 9
+      /*
+       *   9. Given the array of numbers.Count and display even numbers.
+       *    Write LINQ to get the sum of quantities for each item and also find out and display the item that has overall maximum orders.
+       */
+      #endregion
     }
   }
+
+  #region  Class and Members
+
 
   class TennisPlayer
   {
@@ -335,6 +413,7 @@ namespace Linq_Assignments
     public DateTime OrderDate { get; set; }
     public int Quantity { get; set; }
 
+    public string month { get; set; }
     public double TotalPrice { get; set; }
   }
 
@@ -343,4 +422,6 @@ namespace Linq_Assignments
     public string ItemName { get; set; }
     public double price { get; set; }
   }
+
+  #endregion
 }
