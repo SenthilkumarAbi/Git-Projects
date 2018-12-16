@@ -261,7 +261,15 @@ namespace Linq_Assignments
 
       var O2rderlst = (Orderlst
                        .Join(Itemlst, l1 => l1.ItemName, l2 => l2.ItemName,
-                         (l1, l2) => new Order() { OrderId = l1.OrderId, ItemName = l1.ItemName, Quantity = l1.Quantity, TotalPrice = (l1.Quantity * l2.price), OrderDate = l1.OrderDate, month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year) }
+                         (l1, l2) => new Order()
+                         {
+                           OrderId = l1.OrderId,
+                           ItemName = l1.ItemName,
+                           Quantity = l1.Quantity,
+                           TotalPrice = (l1.Quantity * l2.price),
+                           OrderDate = l1.OrderDate,
+                           month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year)
+                         }
                              ))
                         .GroupBy(l2 => l2.month).ToList();
 
@@ -298,7 +306,8 @@ namespace Linq_Assignments
        */
 
       var rr2 = (from l1 in Orderlst
-                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year } by new { month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year) } into d
+                 group new { itemname = l1.ItemName, id = l1.OrderId, month = l1.OrderDate.Month, year = l1.OrderDate.Year }
+                 by new { month = string.Format("{0}/{1}", l1.OrderDate.Month, l1.OrderDate.Year) } into d
                  select new { dt = d.Key.month, count = d.Count() }).OrderByDescending(g => g.dt);
       foreach (var item in rr2)
       {
@@ -366,25 +375,42 @@ namespace Linq_Assignments
       #region 8
       /*
        *  8. Rewrite the last two example of that used Count using LINQ query methods entirely.
-       *  get the name of the item that was ordered in largest quantity in a single order.
+       *  7.a. Get the name of the item that was ordered in largest quantity in a single order. (Hint: use LINQ methods to sort)
+       *  7.b. Find if there are any orders placed before Jan of this year.
+       *   
        */
-      Order eight = (from p in Orderlst
-                       join d1 in Itemlst on p.ItemName equals d1.ItemName
-                       where p.Quantity > 0
-                       
-                       select p
-                    ).Take(1).SingleOrDefault();
 
-    //  var teamBestScores =
-    //from player in players
-    //group player by player.Team into playerGroup
-    //select new
-    //{
-    //  Team = playerGroup.Key,
-    //  BestScore = playerGroup.Max(x => x.Score),
-    //};
+      List<Order> eightQry1 = (Orderlst
+                       .Where(o => o.OrderDate.Year < DateTime.Now.Year)
+                       .OrderByDescending(p => p.Quantity)
+                       .Select(s => s)
+                      ).ToList();
 
-      
+      Order eightQry = (Orderlst
+                      .Where(s => s.Quantity > 0)
+                      .OrderByDescending(p => p.Quantity)
+                      .Select(s => s)
+                   ).Take(1).FirstOrDefault();
+
+
+      Console.WriteLine();
+      Console.WriteLine();
+      if (eightQry != null)
+        Console.WriteLine(" QueryMethods:(using Lambda) Order which is checked quantity >0 and it has most larger in quantity order . The ItemName: {0}  ", eightQry.ItemName);
+      else
+        Console.WriteLine(" No Order is placed quantity >0 and it has larger quatity    ");
+
+
+      Console.WriteLine();
+      Console.WriteLine();
+      Console.WriteLine(" QueryMethods:(using Lambda) Orders placed before Jan of this year: ");
+      foreach (var item in eightQry1)
+      {
+        Console.WriteLine("  ItemName: {0}  ", item.ItemName);
+      }
+      Console.ReadLine();
+      Console.Clear();
+
       #endregion
 
       #region 9
@@ -392,6 +418,83 @@ namespace Linq_Assignments
        *   9. Given the array of numbers.Count and display even numbers.
        *    Write LINQ to get the sum of quantities for each item and also find out and display the item that has overall maximum orders.
        */
+      Console.WriteLine();
+      Console.WriteLine();
+
+      int[] NumberLst = new int[100];
+      for (int i = 0; i < 100; i++)
+      {
+        NumberLst[i] = i + 1;
+      }
+
+      var evenNumbers = from i in NumberLst
+                        where i % 2 == 0
+                        orderby i ascending
+                        select i;
+      int cnt = 0;
+      foreach (var item in evenNumbers)
+      {
+        Console.WriteLine("{0}.Even Numbers is {1}", (cnt + 1), item);
+        cnt++;
+      }
+
+      Console.Clear();
+
+
+      var overAll = (from i in Orderlst
+                     group i by new { i.ItemName } into res
+                     select new
+                     {
+                       count = res.Count().ToString(),
+                       qty = res.Sum(t => t.Quantity).ToString(),
+                       name = res.Key.ToString()
+                     });
+
+      var result = (from td in Orderlst
+
+                    group td by td.ItemName into detail
+                    select new
+                    {
+                      ItemName = detail.Key,
+                      Qty = detail.Sum(x => x.Quantity)
+                    }).Max(u => u.Qty);
+
+      var MaxinumOrder = overAll.Select(s => s).Where(u => u.qty.ToString() == result.ToString());
+
+      foreach (var item in overAll)
+        Console.WriteLine(" Item: {1} OrderQuantity:{0} ", item.qty, item.name);
+
+      Console.WriteLine();
+      Console.WriteLine();
+
+      foreach (var item in MaxinumOrder)
+        Console.WriteLine("  overall maximum orders is {0} which is having quantity:{1}", item.qty, item.name);
+
+      #region Ref
+      //var results = from line in Lines
+      //              group line by line.ProductCode into g
+      //              select new ResultLine
+      //              {
+      //                ProductName = g.First().Name,
+      //                Price = g.Sum(_ => _.Price).ToString(),
+      //                Quantity = g.Count().ToStri ng(),
+
+      // };
+
+      //foreach (var line in Orderlst.GroupBy(info => info.ItemName)
+      //                  .Select(group => new {
+      //                    Metric = group.Key,
+      //                    Count = group.Count()
+      //                  })
+      //                  .OrderBy(x => x.Metric)
+      //{
+      //  Console.WriteLine("{0} {1}", line.Metric, line.Count);
+      //}
+      #endregion
+
+      Console.ReadLine();
+      Console.Clear();
+
       #endregion
     }
   }
