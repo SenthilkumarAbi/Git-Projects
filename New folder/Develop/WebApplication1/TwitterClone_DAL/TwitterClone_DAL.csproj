@@ -30,8 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +49,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Follower.cs">
+      <DependentUpon>TwitterCloneDBManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Following.cs">
+      <DependentUpon>TwitterCloneDBManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>TwitterCloneDBManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tweet.cs">
+      <DependentUpon>TwitterCloneDBManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterCloneDBManager.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwitterCloneDBManager.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterCloneDBManager.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwitterCloneDBManager.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterCloneDBManager.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwitterCloneDBManager.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="TwitterDataAccessManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -48,6 +84,32 @@
       <Project>{aea1f7f1-f677-4b2e-9d78-acdb57755baa}</Project>
       <Name>CommonCommunicationHelper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="TwitterCloneDBManager.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TwitterCloneDBManager.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="TwitterCloneDBManager.edmx.diagram">
+      <DependentUpon>TwitterCloneDBManager.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TwitterCloneDBManager.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TwitterCloneDBManager.edmx</DependentUpon>
+      <LastGenOutput>TwitterCloneDBManager.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="TwitterCloneDBManager.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TwitterCloneDBManager.edmx</DependentUpon>
+      <LastGenOutput>TwitterCloneDBManager.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

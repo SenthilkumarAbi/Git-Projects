@@ -16,3 +16,6 @@ F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\Twi
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\obj\Debug\TwitterClone_BAL.csprojResolveAssemblyReference.cache
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\obj\Debug\TwitterClone_BAL.dll
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\obj\Debug\TwitterClone_BAL.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\EntityFramework.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\TwitterClone_DAL.dll.config
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\TwitterClone_BAL\bin\Debug\EntityFramework.xml

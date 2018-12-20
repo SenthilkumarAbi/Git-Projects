@@ -225,3 +225,10 @@ F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\Web
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\TwitterClone-MVC_WebAPI.csprojResolveAssemblyReference.cache
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\TwitterClone_DAL.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\EntityFramework.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\TwitterClone_DAL.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\TwitterClone_DAL.dll.config
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\EntityFramework.xml
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\WebApplication1\bin\EntityFramework.SqlServer.xml

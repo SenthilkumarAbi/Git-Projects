@@ -14,8 +14,13 @@ namespace TwitterClone_MVC_WebAPI.Controllers
     public ActionResult Home()
     {
       TwitterModal _twitterModal = new TwitterModal();
-      _twitterModal._person.fullname = "Senthilkumar";
-      _twitterModal._person.email = "senthil.mailto@gmail.com";
+      Person userModel;
+      if (Session["UserInfo"] != null)
+      {
+        userModel = (Person)Session["UserInfo"];
+        _twitterModal._person.fullname = userModel.fullname;
+        _twitterModal._person.email = userModel.email;
+      }
       return View(_twitterModal);
     }
 

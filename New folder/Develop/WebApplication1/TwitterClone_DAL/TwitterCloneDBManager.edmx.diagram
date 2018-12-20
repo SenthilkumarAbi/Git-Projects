@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5132957ec4f141cca0b560fd8443e539" Name="Diagram1">
+        <EntityTypeShape EntityType="DOTNETModel.Follower" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOTNETModel.Following" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOTNETModel.Person" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOTNETModel.Tweet" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <AssociationConnector Association="DOTNETModel.FK_PersonFolloer1" ManuallyRouted="false" />
+        <AssociationConnector Association="DOTNETModel.FK_PersonFollower" ManuallyRouted="false" />
+        <AssociationConnector Association="DOTNETModel.FK_PersonFollowing" ManuallyRouted="false" />
+        <AssociationConnector Association="DOTNETModel.FK_PersonFollowing1" ManuallyRouted="false" />
+        <AssociationConnector Association="DOTNETModel.FK_PersonTweet" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
