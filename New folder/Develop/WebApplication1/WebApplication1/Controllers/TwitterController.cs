@@ -4,12 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TwitterClone_MVC_WebAPI.Models;
-
+using WebApplication1.Repository;
 
 namespace TwitterClone_MVC_WebAPI.Controllers
 {
   public class TwitterController : Controller
   {
+    TwitterRepository _Repository = new TwitterRepository();
+
     [HttpGet]
     public ActionResult Home()
     {
@@ -20,6 +22,9 @@ namespace TwitterClone_MVC_WebAPI.Controllers
         userModel = (Person)Session["UserInfo"];
         _twitterModal._person.fullname = userModel.fullname;
         _twitterModal._person.email = userModel.email;
+        _twitterModal._person.user_id = userModel.user_id;
+        _twitterModal._following = _Repository.getFollowings(userModel.user_id);
+        _twitterModal._follower = _Repository.getFollowers(userModel.user_id);
       }
       return View(_twitterModal);
     }
@@ -28,22 +33,62 @@ namespace TwitterClone_MVC_WebAPI.Controllers
     public PartialViewResult GetTweetMessages(int userId)
     {
 
-
-      IEnumerable<Tweet> Items = new List<Tweet> {
-    new Tweet (){ tweet_id = 1,message = "had tea",
-            created=DateTime.Now, user_id= 2, fullname="test" },
-     new Tweet (){ tweet_id = 2,message = "coffee with friends",
-            created=DateTime.Now, user_id= 2 , fullname="test1"},
-     new Tweet (){ tweet_id = 3,message = "fun with movie",
-            created=DateTime.Now, user_id= 2 , fullname="test2"},
-     new Tweet (){ tweet_id = 5,message = "Tea",
-            created=DateTime.Now, user_id= 2, fullname="test3" },
-      new Tweet (){ tweet_id = 6,message = "Tea",
-            created=DateTime.Now, user_id= 2 , fullname="test4"},
-};
-      return PartialView("Tweets", Items);
+      List<Tweet> _Tweets = new List<Tweet>();
+      try
+      {
+        _Tweets = _Repository.getAllTweets(userId);
+      }
+      catch (Exception)
+      {
+        AddErrors("Problem with server. Please try again later..");
+      }
+      return PartialView("Tweets", _Tweets);
     }
 
+    public ActionResult SearchUsersByName(string name)
+    {
+      return View();
+    }
+
+    [HttpPost]
+    [AllowAnonymous]
+    public ActionResult AddTweet(TwitterModal _twitterModal)
+    {
+      string _ValidationMessage = string.Empty;
+      try
+      {
+        if (Session["UserInfo"] != null)
+        {
+          Person userModel = (Person)Session["UserInfo"];
+          Tweet tweet = new Tweet
+          {
+            user_id = userModel.user_id,
+            fullname = userModel.fullname,
+            message = _twitterModal._myTweet.message,
+            created = DateTime.Now,
+
+          };
+
+          _Repository.SaveTweet(tweet, userModel.user_id, out _ValidationMessage);
+
+        }
+        else
+        {
+          return RedirectToAction("Login", "User");
+        }
+
+      }
+      catch (Exception)
+      {
+        AddErrors("Problem with server. Please try again later..");
+      }
+      return RedirectToAction("Home", "Twitter");
+    }
+
+    private void AddErrors(string error)
+    {
+      ModelState.AddModelError("", error);
+    }
 
   }
 }

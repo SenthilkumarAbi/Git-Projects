@@ -25,7 +25,13 @@ namespace TwitterClone_MVC_WebAPI.Models
     [DataType(DataType.Password)]
     [Required(ErrorMessage = "required")]
     [DisplayName("Password")]
+    [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
     public string password { get; set; }
+
+    [Compare("Password", ErrorMessage = "Confirm password dose not match.")]
+    [DataType(DataType.Password)]
+    [Display(Name = "Confirm Password")]
+    public string confirmpassword { get; set; }
 
     [Required(ErrorMessage = "required")]
     [DisplayName("FullName")]

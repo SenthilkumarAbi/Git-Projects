@@ -79,15 +79,31 @@ namespace WebApplication1.Controllers
     [HttpPost]
     public ActionResult Login(Person model)
     {
+
       Person _Resultmodel = new Person();
-      string _ValidationMessage = string.Empty;
-      _Repository.Validate(model.username, model.password, out _ValidationMessage, out _Resultmodel);
-      TempData["Message"] = _ValidationMessage;
-      Session["UserInfo"] = _Resultmodel;
+      //if (ModelState.IsValid)
+      {
+        string _ValidationMessage = string.Empty;
+        try
+        {
+          _Repository.Validate(model.username, model.password, out _ValidationMessage, out _Resultmodel);
+          TempData["Message"] = _ValidationMessage;
+          Session["UserInfo"] = _Resultmodel;
+        }
+        catch (Exception)
+        {
+          AddErrors("Something went wrong.Please try again After sometime.!");
+        }
+      }
       if (_Resultmodel.user_id != 0)
         return RedirectToAction("Home", "Twitter");
       else
         return View();
+    }
+
+    private void AddErrors(string error)
+    {
+      ModelState.AddModelError("", error);
     }
   }
 }

@@ -6,7 +6,10 @@
 }
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+  </script>
   <style>
+
     input[type="text"] {
       width: 80%;
       border: 2px solid #aaa;
@@ -57,49 +60,74 @@
       }
   </style>
 </head>
+
 <section>
   <nav>
     <h2></h2>
     @*<div class="right-inner-addon">
-      <i class="glyphicon-search"></i>
-      Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Search" })
-    </div>*@
+        <i class="glyphicon-search"></i>
+        Find by name: @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control", placeholder = "Search" })
+      </div>*@
 
-    <div class="inputWithIcon" >
+    <div class="inputWithIcon">
       <div class="">
-        <input type="text" placeholder="Your name">
-        <button class="glyphicon-search right" style="margin-left:auto" ALIGN='right' type="button" value=""></button>
+        <input id="SearchBox" type="text"  placeholder="Your name">
+        <button class="glyphicon-search right" style="margin-left:auto" ALIGN='right' id="btnSearch"  value=""></button>
       </div><i class="fa fa-user fa-lg fa-fw " aria-hidden="true">
 
-        </i>
+      </i>
 
-       
-     
+
+
     </div>
-     
+    <div class="row" style="padding-top:20px; width:100%;">
+      <div class="col-md-4">
+        <ul>
+          <li>
+            <span id="follow">Follow (<a href="#">@Model._follower.Count()</a>)</span>
+          </li>
+          <li>
+            <span id="following">Following (<a href="#">@Model._following.Count()</a>)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <article>
     <h2 class="text-right">
       Welcome @Html.Display("_person.fullname"),
     </h2>
 
-    @using (Html.BeginForm())
+    @using (Html.BeginForm("AddTweet", "Twitter"))
     {
-    @Html.AntiForgeryToken()
+      @Html.AntiForgeryToken()
       <div class="row">
         What are you doing ?
       </div>
-    <div class="row">
-      <div class="col-sm-5  ">
-        
-        @Html.TextAreaFor(m => m._myTweet.message, new { @class = "form-control" })
-        
-      </div>
-      <div class="col-sm-5 bottom left">
-        <input class="btn btn-primary form-control" type="button" value="Update" />
+      <div class="row">
+        <div class="col-sm-5  ">
 
+          @Html.TextAreaFor(m => m._myTweet.message, new { @class = "form-control", id = "tweetId" })
+
+
+        </div>
+        <div class="col-sm-5 bottom left">
+          <input class="btn btn-primary form-control" id="btnUpdate" type="submit" value="Update" />
+
+        </div>
       </div>
-    </div>
+
+      <div id="userListDiv" style="display:none">
+        <h4 id="userListHeader"></h4>
+        <table id="userListTable">
+          <thead>
+            <tr>
+              <th style="width:20%;">User Name</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
     }
 
     <div class="float">
@@ -107,3 +135,53 @@
     </div>
   </article>
 </section>
+ 
+<script type="text/javascript">
+   
+    $('#btnSearch').click(function (event) {
+
+      event.preventDefault();
+      var name = $('#SearchBox').val();
+      alert(name);
+      $.ajax({
+        type: "GET",
+        url: "/Twitter/SearchUsersByName?name=" + name,
+         success: function (data) {
+         
+         alert('sucess')
+       
+        },
+        error: function (e) {
+
+        }
+      });
+
+    });
+ 
+
+  //$(function () {
+  
+  //  $('#btnSearch').click(function (event) {
+
+  //    event.preventDefault();
+  //    var name = $('#SearchBox').val();
+  //    alert(name);
+  //    $.ajax({
+  //      type: "GET",
+  //      url: "/Twitter/SearchUsersByName?name=" + name
+  //    });
+  //  });
+
+  //  //$('#btnUpdate').click(function (event) {
+  //  //  debugger;
+  //  //  alert("hi");
+  //  //  event.preventDefault();
+  //  //  var message = $('#tweetId').val();
+
+  //  //  $.ajax({
+  //  //    type: "POST",
+  //  //    url: "/Twitter/AddTweet?message=" + message
+  //  //  });
+  //  //});
+  //});
+</script>
