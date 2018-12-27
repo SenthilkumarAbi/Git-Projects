@@ -30,9 +30,9 @@ namespace TwitterClone_BAL
       return ValidationResult.Sucess;
     }
 
-    public ValidationResult GetTweets(int userId, out List<Entity.Tweet> _tweets)
+    public ValidationResult GetTweets(int userId, out List<Tweet> _Tweets)
     {
-      _tweets = _twitterDataAccess.GetTweets(userId).ToList();
+     _Tweets = _twitterDataAccess.GetTweets(userId).ToList();
       return ValidationResult.Sucess;
     }
 
@@ -47,6 +47,21 @@ namespace TwitterClone_BAL
       List<Entity.Follower> follower = new List<Entity.Follower>();
       follower = _twitterDataAccess.GetFollowers(userId);
       return follower;
+    }
+
+
+    public List<Entity.Person> GetUsers(string userName)
+    {
+      List<Entity.Person> _Person = new List<Entity.Person>();
+      _Person = _twitterDataAccess.GetUser(userName);
+      return _Person;
+    }
+
+    public Entity.Person AddFollowerByUser(int userID, string userName, out string message)
+    {
+      Entity.Person _Person = new Entity.Person();
+      _Person = _twitterDataAccess.AddFollowerByUser(userID, userName, out message);
+      return _Person;
     }
   }
 }

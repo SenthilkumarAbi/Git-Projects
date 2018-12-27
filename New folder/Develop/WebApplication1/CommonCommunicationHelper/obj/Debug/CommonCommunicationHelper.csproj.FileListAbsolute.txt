@@ -1,9 +1,8 @@
-C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.dll
-C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.pdb
-C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.dll
-C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.pdb
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.dll
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.pdb
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.dll
 F:\Projects\Git\Git_Projects\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.pdb
-C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.csprojResolveAssemblyReference.cache
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\bin\Debug\CommonCommunicationHelper.pdb
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.dll
+C:\New folder\Senthil\New folder\New folder\Develop\Git-Projects\New folder\Develop\WebApplication1\CommonCommunicationHelper\obj\Debug\CommonCommunicationHelper.pdb

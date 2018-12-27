@@ -4,10 +4,11 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel;
 
-namespace TwitterClone_MVC_WebAPI.Models
+namespace CommonCommunicationHelper.DTO
 {
   public class Tweet
-  { 
+  {
+    
     [DisplayName("Tweet#")] 
     public int tweet_id { get; set; }
     public int user_id { get; set; }

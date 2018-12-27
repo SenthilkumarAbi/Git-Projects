@@ -5,16 +5,16 @@ using System.Web;
 
 namespace TwitterClone_MVC_WebAPI.Models
 {
-    public class Follower
-    {
-        //       [FR_ID] int IDENTITY(1,1) ,
-        //[user_id]
-        //       int Not null,
+  public class Follower
+  {
+     
+    public int FR_ID { get; set; }
+    public int user_id { get; set; }
 
-        //   [follower_Id] int not null,
-        public int FR_ID { get; set; }
-        public int user_id { get; set; }
+    public int follower_Id { get; set; }
 
-        public int follower_Id { get; set; }
-    }
+    public string userName { get; set; }
+
+    public string followerUserName { get; set; }
+  }
 }

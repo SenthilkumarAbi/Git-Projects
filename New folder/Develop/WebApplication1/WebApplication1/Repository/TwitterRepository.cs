@@ -8,7 +8,7 @@ using TwitterClone_DAL;
 using DTO = CommonCommunicationHelper.DTO;
 using Model = TwitterClone_MVC_WebAPI.Models;
 
-namespace WebApplication1.Repository
+namespace TwitterClone_MVC_WebAPI.Repository
 {
   public class TwitterRepository
   {
@@ -66,7 +66,8 @@ namespace WebApplication1.Repository
     public List<Model.Tweet> getAllTweets(int userId)
     {
       List<Model.Tweet> _Tweets = new List<Model.Tweet>();
-      List<Tweet> _tweets = new List<Tweet>();
+      //List<Tweet> _tweets = new List<Tweet>();
+      List<DTO.Tweet> _tweets = new List<DTO.Tweet>();
 
       _twitterService.GetTweets(userId, out _tweets);
       foreach (var s in _tweets)
@@ -74,9 +75,9 @@ namespace WebApplication1.Repository
         _Tweets.Add(new Model.Tweet
         {
           message = s.message,
-          created = s.created ?? DateTime.Now,
+          created = s.created  ,
           user_id = s.user_id,
-          fullname = s.Person.fullname,
+          fullname = s.fullname ,
           tweet_id = s.tweet_id
         });
       }
@@ -88,10 +89,10 @@ namespace WebApplication1.Repository
       ValidationResult _validationResult = new ValidationResult();
       _ValidationMessage = string.Empty;
 
-      Tweet _tweet;
+      TwitterClone_DAL.Tweet _tweet;
       try
       {
-        _tweet = new Tweet { user_id = _tweetModel.user_id, created = _tweetModel.created, message = _tweetModel.message };
+        _tweet = new TwitterClone_DAL.Tweet { user_id = _tweetModel.user_id, created = _tweetModel.created, message = _tweetModel.message };
         _validationResult = _twitterService.SaveTweet(_tweet, userId, out _ValidationMessage);
 
 
@@ -110,6 +111,41 @@ namespace WebApplication1.Repository
       }
     }
 
+    public List<Model.Person> getUser(string userName)
+    {
+      List<Model.Person> _follower = new List<Model.Person>();
+      var result = _twitterService.GetUsers(userName);
+
+      foreach (var item in result)
+      {
+        _follower.Add(new Model.Person
+        {
+          username = item.username,
+          user_id = item.user_id,
+          fullname = item.fullname
+        });
+      }
+
+      return _follower;
+    }
+
+    public List<Model.Person> AddFollowerByUser(int userID, string userName, out string message)
+    {
+      List<Model.Person> _follower = new List<Model.Person>();
+      var result = _twitterService.AddFollowerByUser(userID, userName, out message);
+
+    
+        _follower.Add(new Model.Person
+        {
+          username = result.username,
+          user_id = result.user_id,
+          fullname = result.fullname
+        });
+      
+
+      return _follower;
+    }
+
     public List<Model.Follower> getFollowers(int userId)
     {
       List<Model.Follower> _follower = new List<Model.Follower>();
@@ -120,7 +156,9 @@ namespace WebApplication1.Repository
         _follower.Add(new Model.Follower
         {
           follower_Id = item.follower_Id,
-          user_id = item.user_id
+          user_id = item.user_id,
+          followerUserName = item.Person.username,
+          userName = item.Person1.username
         });
       }
 
@@ -137,7 +175,9 @@ namespace WebApplication1.Repository
         _followings.Add(new Model.Following
         {
           following_Id = item.following_Id,
-          user_id = item.user_id
+          user_id = item.user_id,
+          followingUserName = item.Person1.username,
+          userName = item.Person.username
         });
       }
 

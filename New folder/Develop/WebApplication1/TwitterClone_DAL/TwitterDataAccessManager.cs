@@ -105,10 +105,10 @@ namespace TwitterClone_DAL
 
     }
 
-    public void SaveTweet(Tweet _tweet, int user_id, out string _ValidationMessage )
+    public void SaveTweet(Tweet _tweet, int user_id, out string _ValidationMessage)
     {
       _ValidationMessage = string.Empty;
-      
+
 
       using (DOTNETEntities _TwitterEntity = new DOTNETEntities())
       {
@@ -116,14 +116,17 @@ namespace TwitterClone_DAL
         _TwitterEntity.Tweets.Add(_tweet);
         _TwitterEntity.SaveChanges();
         _ValidationMessage = "Tweet Successfully Posted!.";
-       
+
       }
 
     }
 
-    public Collection<Tweet> GetTweets(int userId)
+    public List<DTO.Tweet>  GetTweets(int userId)
     {
-      Collection<Tweet> tweets = new Collection<Tweet>();
+      List<Tweet> tweets = new List<Tweet>();
+      List<Tweet> _followerTweets = new List<Tweet>();
+      List<DTO.Tweet> _Tweets = new List<DTO.Tweet>();
+
       using (var db = new DOTNETEntities())
       {
         db.Tweets.Where(x => x.user_id == userId).ToList()
@@ -137,28 +140,64 @@ namespace TwitterClone_DAL
               Person = y.Person
 
             }));
-      }
+        
+        List<Tweet> _followertweets = (from t in db.Tweets
+                                       join fr in db.Followers on t.user_id equals fr.follower_Id
+                                       join p in db.People on fr.follower_Id equals p.user_id
+                                       where fr.user_id == userId
+                                       select t
+                                      ).Distinct().ToList();
 
-      return tweets;
+        tweets.AddRange(_followertweets);
+
+        foreach (var s in tweets)
+        {
+          _Tweets.Add(new DTO.Tweet
+          {
+            message = s.message,
+            created = s.created ?? DateTime.Now,
+            user_id = s.user_id,
+            fullname = s.Person == null ? "" : s.Person.fullname,
+            tweet_id = s.tweet_id
+          });
+        }
+
+      }
+      _Tweets.OrderBy(s => s.created);
+      return _Tweets;
     }
 
     public List<Follower> GetFollowers(int userId)
     {
-      Collection<Follower> followers = new Collection<Follower>();
+      List<Follower> _followers = new List<Follower>();
       using (var db = new DOTNETEntities())
       {
-        db.Followings.Where(x => x.following_Id == userId)
-            .ToList()
-            .ForEach(y =>
-            followers.Add(new Follower()
-            {
-              user_id = y.user_id,
-              follower_Id = y.following_Id
-            }));
+
+        //_followers = (from t in db.Tweets
+        //              join fr in db.Followers on t.user_id equals fr.follower_Id
+        //              where fr.user_id == userId
+        //              select fr
+        //             ).Distinct().ToList();
+
+        db.Followers.Where(x => x.user_id == userId)
+          .ToList()
+          .ForEach(y =>
+          _followers.Add(new Follower()
+          {
+            user_id = y.user_id,
+            follower_Id = y.follower_Id,
+            Person = y.Person,
+            Person1 = y.Person1
+          }));
+
       }
 
-      return followers.ToList();
+      return _followers;
     }
+
+
+    
+
 
     public List<Following> GetFollowings(int userId)
     {
@@ -171,11 +210,57 @@ namespace TwitterClone_DAL
             follwings.Add(new Following()
             {
               user_id = y.user_id,
-              following_Id = y.following_Id
+              following_Id = y.following_Id,
+              Person = y.Person,
+              Person1 = y.Person1
             }));
       }
 
       return follwings.ToList();
     }
+
+    public List<Person> GetUser(string userName)
+    {
+      List<Person> _Person = new List<Person>();
+      using (var db = new DOTNETEntities())
+      {
+        _Person = (from p in db.People
+                   where p.username == userName
+                   select p).ToList();
+          
+      }
+
+      return _Person;
+    }
+
+    public Person AddFollowerByUser(int userID, string userName, out string message)
+    {
+      Person _Person = new Person();
+      message = string.Empty;
+      using (var db = new DOTNETEntities())
+      {
+        _Person = (from p in db.People
+                   where p.username == userName
+                   select p).FirstOrDefault();
+        
+        if (_Person != null && _Person.user_id !=0)
+        {
+          Follower _addUser = new Follower() { user_id = userID, follower_Id = _Person.user_id };
+          if (!db.Followers.Where(s => s.user_id == _addUser.user_id && s.follower_Id == _addUser.follower_Id).Any())
+          {
+            db.Followers.Add(_addUser);
+            db.SaveChanges();
+            message = "Follower is added";
+          }
+          else
+          {
+            message = "Follower is already in your list!.";
+          }
+        }
+      }
+      
+      return _Person;
+    }
   }
 }
+

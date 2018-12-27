@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TwitterClone_MVC_WebAPI;
 using TwitterClone_MVC_WebAPI.Models;
-using WebApplication1.Repository;
+using TwitterClone_MVC_WebAPI.Repository;
 
-namespace WebApplication1.Controllers
+namespace TwitterClone_MVC_WebAPI.Controllers
 {
   public class UserController : Controller
   {
@@ -90,9 +91,9 @@ namespace WebApplication1.Controllers
           TempData["Message"] = _ValidationMessage;
           Session["UserInfo"] = _Resultmodel;
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-          AddErrors("Something went wrong.Please try again After sometime.!");
+          AddErrors(ex, "User", "Login");
         }
       }
       if (_Resultmodel.user_id != 0)
@@ -101,9 +102,20 @@ namespace WebApplication1.Controllers
         return View();
     }
 
-    private void AddErrors(string error)
+    private void AddErrors(Exception error, string controller, string action)
     {
+      ErrLog.WriteLog(error, controller, action);
       ModelState.AddModelError("", error);
+    }
+
+    protected override void OnException(ExceptionContext filterContext)
+    {
+      filterContext.ExceptionHandled = true;
+      Exception ex = filterContext.Exception;
+      string controller = filterContext.RouteData.Values["controller"].ToString();
+      string action = filterContext.RouteData.Values["action"].ToString();
+      ErrLog.WriteLog(ex, controller, action);
+      filterContext.Result = View("Error");
     }
   }
 }
