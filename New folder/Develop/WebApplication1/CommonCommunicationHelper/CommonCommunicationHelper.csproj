@@ -41,10 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="DTO\Follower.cs" />
-    <Compile Include="DTO\Following.cs" />
-    <Compile Include="DTO\Person.cs" />
     <Compile Include="DTO\Tweet.cs" />
+    <Compile Include="DTO\ValidationResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

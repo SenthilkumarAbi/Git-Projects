@@ -11,12 +11,17 @@
 <head>
   <meta name="viewport" content="width=device-width" />
   <title>SignUp</title>
+  @Scripts.Render("~/bundles/jquery", "~/bundles/jqueryval")
 </head>
+
 <body>
   @using (Html.BeginForm())
   {
     @Html.AntiForgeryToken()
-
+    if (@TempData["Message"] != null)
+    {
+      <span class="text-danger"> @TempData["Message"].ToString() </span>
+    }
     <div class="form-horizontal">
       <h4 class="text-center">Join My Twitter Clone</h4>
       <hr />
