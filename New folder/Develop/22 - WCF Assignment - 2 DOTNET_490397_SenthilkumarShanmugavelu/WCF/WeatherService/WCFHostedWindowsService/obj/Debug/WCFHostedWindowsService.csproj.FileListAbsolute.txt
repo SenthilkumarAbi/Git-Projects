@@ -1,0 +1,11 @@
+C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe.config
+C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.pdb
+C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WeatherService.dll
+C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WeatherService.pdb
+C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WeatherService.dll.config
+C:\WCF\WeatherService\WCFHostedWindowsService\obj\Debug\WCFHostedWindowsService.csprojResolveAssemblyReference.cache
+C:\WCF\WeatherService\WCFHostedWindowsService\obj\Debug\WCFHostedWindowsService.exe
+C:\WCF\WeatherService\WCFHostedWindowsService\obj\Debug\WCFHostedWindowsService.pdb
+C:\WCF\WeatherService\WCFHostedWindowsService\obj\Debug\WCFHostedWindowsService.ProjectInstaller.resources
+C:\WCF\WeatherService\WCFHostedWindowsService\obj\Debug\WCFHostedWindowsService.csproj.GenerateResource.Cache

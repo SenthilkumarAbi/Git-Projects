@@ -1,0 +1,10 @@
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EmployeeService.dll.config
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EmployeeService.dll
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EmployeeService.pdb
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EntityFramework.dll
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EntityFramework.SqlServer.dll
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EntityFramework.xml
+C:\WCF\EmployeeService\EmployeeService\bin\Debug\EntityFramework.SqlServer.xml
+C:\WCF\EmployeeService\EmployeeService\obj\Debug\EmployeeService.dll
+C:\WCF\EmployeeService\EmployeeService\obj\Debug\EmployeeService.pdb
+C:\WCF\EmployeeService\EmployeeService\obj\Debug\EmployeeService.csprojResolveAssemblyReference.cache

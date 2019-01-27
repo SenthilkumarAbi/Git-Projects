@@ -1,0 +1,6 @@
+C:\WCF\WeatherService\WeatherService\bin\WeatherService.dll.config
+C:\WCF\WeatherService\WeatherService\bin\WeatherService.dll
+C:\WCF\WeatherService\WeatherService\bin\WeatherService.pdb
+C:\WCF\WeatherService\WeatherService\obj\Debug\WeatherService.dll
+C:\WCF\WeatherService\WeatherService\obj\Debug\WeatherService.pdb
+C:\WCF\WeatherService\WeatherService\obj\Debug\WeatherService.csprojResolveAssemblyReference.cache

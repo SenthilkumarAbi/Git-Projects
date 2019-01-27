@@ -1,0 +1,416 @@
+﻿Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Creating EventLog source WeatherService in log Application...
+Rolling back assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Restoring event log to previous state for source WeatherService.
+An exception occurred during the Rollback phase of the System.Diagnostics.EventLogInstaller installer.
+System.Security.SecurityException: The source was not found, but some or all event logs could not be searched.  Inaccessible logs: Security.
+An exception occurred during the Rollback phase of the installation. This exception will be ignored and the rollback will continue. However, the machine might not fully revert to its initial state after the rollback is complete.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Creating EventLog source WeatherService in log Application...
+Rolling back assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Restoring event log to previous state for source WeatherService.
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Uninstalling assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+Removing EventLog source WeatherService.
+Service WeatherService is being removed from the system...
+Service WeatherService was successfully removed from the system.
+Installing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 
+Installing service WeatherService...
+Service WeatherService has been successfully installed.
+Creating EventLog source WeatherService in log Application...
+Committing assembly 'C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe'.
+Affected parameters are:
+   i = 
+   logfile = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.InstallLog
+   assemblypath = C:\WCF\WeatherService\WCFHostedWindowsService\bin\Debug\WCFHostedWindowsService.exe
+   logtoconsole = 

@@ -1,0 +1,13 @@
+C:\WCF\EmployeeService\WCFHost\bin\Debug\WCFHost.exe.config
+C:\WCF\EmployeeService\WCFHost\bin\Debug\WCFHost.exe
+C:\WCF\EmployeeService\WCFHost\bin\Debug\WCFHost.pdb
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EmployeeService.dll
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EntityFramework.dll
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EmployeeService.pdb
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EmployeeService.dll.config
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EntityFramework.xml
+C:\WCF\EmployeeService\WCFHost\obj\Debug\WCFHost.csprojResolveAssemblyReference.cache
+C:\WCF\EmployeeService\WCFHost\obj\Debug\WCFHost.exe
+C:\WCF\EmployeeService\WCFHost\obj\Debug\WCFHost.pdb
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EntityFramework.SqlServer.dll
+C:\WCF\EmployeeService\WCFHost\bin\Debug\EntityFramework.SqlServer.xml

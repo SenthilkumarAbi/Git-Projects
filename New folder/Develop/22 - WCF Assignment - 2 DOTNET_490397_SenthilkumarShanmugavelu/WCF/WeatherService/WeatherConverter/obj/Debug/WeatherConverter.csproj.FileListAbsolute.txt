@@ -1,0 +1,6 @@
+C:\WCF\WeatherService\WeatherConverter\bin\Debug\WeatherConverter.exe.config
+C:\WCF\WeatherService\WeatherConverter\bin\Debug\WeatherConverter.exe
+C:\WCF\WeatherService\WeatherConverter\bin\Debug\WeatherConverter.pdb
+C:\WCF\WeatherService\WeatherConverter\obj\Debug\WeatherConverter.exe
+C:\WCF\WeatherService\WeatherConverter\obj\Debug\WeatherConverter.pdb
+C:\WCF\WeatherService\WeatherConverter\obj\Debug\WeatherConverter.csprojResolveAssemblyReference.cache
