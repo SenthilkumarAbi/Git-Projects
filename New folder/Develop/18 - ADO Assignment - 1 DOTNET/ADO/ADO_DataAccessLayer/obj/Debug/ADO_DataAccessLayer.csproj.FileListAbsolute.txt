@@ -1,0 +1,5 @@
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO_DataAccessLayer\bin\Debug\ADO_DataAccessLayer.dll
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO_DataAccessLayer\bin\Debug\ADO_DataAccessLayer.pdb
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO_DataAccessLayer\obj\Debug\ADO_DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO_DataAccessLayer\obj\Debug\ADO_DataAccessLayer.dll
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO_DataAccessLayer\obj\Debug\ADO_DataAccessLayer.pdb

@@ -1,0 +1,9 @@
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\bin\Debug\ADO_BusinessAccessLayer.dll
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\bin\Debug\ADO_BusinessAccessLayer.pdb
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\obj\Debug\ADO_BusinessAccessLayer.csprojResolveAssemblyReference.cache
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\obj\Debug\ADO_BusinessAccessLayer.dll
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\obj\Debug\ADO_BusinessAccessLayer.pdb
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\bin\Debug\ADO_DataAccessLayer.dll
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\bin\Debug\ADO_DataAccessLayer.pdb
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\bin\Debug\System.Web.Mvc.dll
+C:\New folder\Senthil\New folder\New folder\Git\Git-Projects\New folder\Develop\ADO\ADO_BusinessAccessLayer\bin\Debug\System.Web.Mvc.xml
