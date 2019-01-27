@@ -1,0 +1,104 @@
+/* 1 Re-create the Customers and  Orders tables, enhancing their definition with all primary and foreign keys constraints */
+CREATE TABLE Customers(
+        CustomerId char(5) not null constraint customer_id_pk primary key
+    ,   CompanyName varchar(40) not null
+    ,   ContactName char(30) not null
+    ,   Address varchar(60) null
+    ,   City char(15) null
+    ,   Phone char(24) null
+    ,   Fax char(24) null
+    ,  
+)
+Go
+
+CREATE TABLE Orders(
+    OrderId int not null constraint order_id_pk primary key
+,   CustomerId char(5) not null constraint customer_id_fk foreign key REFERENCES Customers(CustomerId)
+,   Orderdate datetime null
+,   Shippeddate datetime null
+,   Frieght Money null
+,   Shipname varchar(40) null
+,   Shipaddress varchar(60) null
+,   Quantity integer null
+)
+Go
+
+/* 2 Using the ALTER TABLE statement, create an integrity constraint that limits the possible values of the quantity column in the Orders table to values between 1 and 30 */
+Alter table Orders Add Constraint  quantity_ck check (Quantity>1 OR Quantity<30)
+Go
+
+/* 3 With the help of the corresponding system procedures and the Transact-SQL statements CREATE DEFAULT and CREATE RULE, 
+create the alias data type “Western Countries”. The possible values for the new data type are CA(for California), WA( for 
+Washington), OR( for Oregon), and NM( for New Mexico). The default value is CA. 
+Finally, create a table called Regions with the columns City and  Country using the new data type for the later */
+sp_addType @typename='WesternCountries',@phystype='Varchar(2)',@nulltype='NULL',@owner='Fsddeveloper'
+Go
+
+CREATE DEFAULT Default_Countries
+AS 'CA'
+Go
+
+CREATE Rule rule_Countries
+AS
+@Country IN ('CA','WA','OR','NM')
+Go
+
+exec sp_bindefault 'Default_Countries','WesternCountries'
+Go
+
+exec sp_bindrule 'rule_Countries','WesternCountries'
+Go
+
+/* 4 Display all integrity constraints for the Orders table*/
+select * from information_schema.table_constraints where table_name='Orders';
+Go
+
+/* 5 Delete the primary key of the Customers table. Why isn’t that working? */
+Alter table Customers Drop constraint customer_id_pk
+/*Error(s), warning(s):
+The constraint 'customer_id_pk' is being referenced by table 'Orders', foreign key constraint 'customer_id_fk'.
+Could not drop constraint. See previous errors.
+There is already a foreign key constraint available in Orders table so only after dropping that we can drop the Primary key
+*/
+
+Go
+
+/* 6 Delete the integrity constraint defined in Step-2 */
+Alter table Orders Drop constraint quantity_ck
+
+Go
+
+/* 7 Write a function that will return the age of the person given his or her date of birth  */
+CREATE FUNCTION CalculateAge(@in_dDob datetime)
+  RETURNS INT
+AS
+BEGIN
+    DECLARE @Age int
+    SELECT @Age=Datediff(year,@in_dDob,Getdate());
+    Return @Age
+END
+Go
+ 
+--Go
+
+/* 8 Write a procedure that accepts name and data of birth of the student and inserts the data in the student table with the date computed. The SID should be largest sid in the table +1. */
+CREATE TABLE Student(
+        SId Int 
+    ,   Sname varchar(40)
+    ,   Dob datetime
+)
+Go
+
+CREATE PROC SP_Student_Insert(
+        @in_sSname varchar(40)
+    ,   @in_dDob datetime
+)
+AS
+BEGIN
+    Declare @sSname varchar(40)=@in_sSname,   @dDob datetime=@in_dDob,@iId INT
+    SELECT @iId=Max(Sid) FROM Student
+    INSERT INTO Student(Sid,Sname,Dob) Values(ISNULL(@iId,0)+1,@sSname,@dDob)
+    
+END
+Go
+
