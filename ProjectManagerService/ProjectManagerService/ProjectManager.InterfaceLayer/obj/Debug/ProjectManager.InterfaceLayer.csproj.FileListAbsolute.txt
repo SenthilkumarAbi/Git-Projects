@@ -1,0 +1,5 @@
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.InterfaceLayer\obj\Debug\ProjectManager.InterfaceLayer.csprojResolveAssemblyReference.cache
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.InterfaceLayer\bin\Debug\ProjectManager.InterfaceLayer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.InterfaceLayer\bin\Debug\ProjectManager.InterfaceLayer.pdb
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.InterfaceLayer\obj\Debug\ProjectManager.InterfaceLayer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.InterfaceLayer\obj\Debug\ProjectManager.InterfaceLayer.pdb
