@@ -1,0 +1,4 @@
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.CommonEntities\bin\Debug\ProjectManager.CommonEntities.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.CommonEntities\bin\Debug\ProjectManager.CommonEntities.pdb
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.CommonEntities\obj\Debug\ProjectManager.CommonEntities.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.CommonEntities\obj\Debug\ProjectManager.CommonEntities.pdb

@@ -1,0 +1,17 @@
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.BusinessLayer.dll.config
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.BusinessLayer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.BusinessLayer.pdb
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\EntityFramework.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.CommonEntities.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.DataAccessLayer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.InterfaceLayer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.CommonEntities.pdb
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.DataAccessLayer.pdb
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.DataAccessLayer.dll.config
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\ProjectManager.InterfaceLayer.pdb
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\EntityFramework.xml
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\bin\Debug\EntityFramework.SqlServer.xml
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\obj\Debug\ProjectManager.BusinessLayer.csprojResolveAssemblyReference.cache
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\obj\Debug\ProjectManager.BusinessLayer.dll
+F:\Projects\Git\Git_ProjectManager\Git-Projects\ProjectManagerService\ProjectManagerService\ProjectManager.BusinessLayer\obj\Debug\ProjectManager.BusinessLayer.pdb
